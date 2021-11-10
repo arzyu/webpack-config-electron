@@ -1,0 +1,36 @@
+{
+  "name": "@arzyu/webpack-config-electron",
+  "version": "0.1.0",
+  "description": "Webpack configuration for electron project.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist # rm -rf dist",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@arzyu/webpack-config-common": "^2.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "webpack": "^5.62.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arzyu/webpack-config-electron"
+  },
+  "license": "MIT"
+}
